@@ -17,8 +17,7 @@ build:
 test:
 	go test -v ./...
  
-run:
-	go build -o ${APP_BINARY_PATH} main.go
+run:build
 	./${APP_BINARY_PATH}
 
 fmt:

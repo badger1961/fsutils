@@ -30,6 +30,11 @@ func main() {
 		os.Exit(1)
 	}
 
+	if len(commandLineOptions.FolderName) == 0 {
+		LOG.Errorln("Backupmode is true, but target folder is not set")
+		os.Exit(1)
+	}
+
 	fsutils.BackupFolderWithTimeStamp(commandLineOptions.FolderName)
 }
 
