@@ -56,7 +56,7 @@ func parseCommandLine() (*CommandLineOptions, error) {
 		err := errors.New("Hmm could not parse command line")
 		return nil, err
 	}
-	commandLineOptions := initCommandLineOptions(configFileName)
+	commandLineOptions := initCommandLineOptions()
 
 	if isVersionPrint {
 		commandLineOptions.IsVersionPrint = true
