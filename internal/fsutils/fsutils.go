@@ -15,10 +15,10 @@ var LOG_INFO = fsulog.GetInfoLogger()
 var LOG_ERROR = fsulog.GetErrorLogger()
 
 func BackupFolderWithTimeStamp(folderName string, archiveName string) error {
-	LOG_INFO.Printf("Backup folder %s\n", folderName)
+	LOG_INFO.Printf("Backup folder %s to %s\n", folderName, archiveName)
 	err := createZipArchive(folderName, archiveName)
 	if err != nil {
-		LOG_ERROR.Printf("Hmm ... Could not create TAR file %s\n", err.Error())
+		LOG_ERROR.Printf("Hmm ... Could not create ZIP file %s\n", err.Error())
 	}
 	t := time.Now()
 	suffix := t.Format("20060102150405")

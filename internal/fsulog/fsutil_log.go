@@ -28,7 +28,7 @@ func initLogging() error {
 	warningLogger = log.New(os.Stdout, "WARN:", log.Ldate|log.Ltime|log.Lshortfile|log.Lmicroseconds)
 	infoLogger = log.New(os.Stdout, "INFO:", log.Ldate|log.Ltime|log.Lshortfile|log.Lmicroseconds)
 	errorLogger = log.New(os.Stdout, "ERROR:", log.Ldate|log.Ltime|log.Lshortfile|log.Lmicroseconds)
-	infoLogger.Println("Test Player Logging has been started")
+	infoLogger.Println("FSUtils Logging has been started")
 	return nil
 }
 
