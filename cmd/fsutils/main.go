@@ -11,7 +11,7 @@ import (
 	"gitflic.com/aag031/test_player/internal/fsutils"
 )
 
-const VERSION = "0.0.2"
+const VERSION = "0.0.3"
 
 var LOG_DEBUG = fsulog.GetDebugLogger()
 var LOG_ERROR = fsulog.GetErrorLogger()

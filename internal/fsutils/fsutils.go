@@ -55,7 +55,12 @@ func createZipArchive(source, target string) error {
 		}
 		defer file.Close()
 
-		f, err := w.Create(path)
+		relativePath, err := filepath.Rel(filepath.Dir(source), path)
+	        if err != nil {
+                   return err
+                }
+
+		f, err := w.Create(relativePath)
 		if err != nil {
 			return err
 		}
